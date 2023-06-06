@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
 		);
 	} else {
 		return NextResponse.redirect(
-			"https://google.com/?search=" +
+			"https://google.com/search?q=" +
 				request.nextUrl.searchParams.get("q")
 		);
 	}
