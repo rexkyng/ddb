@@ -1,4 +1,4 @@
-import { Heading, Paragraph, Box } from "dracula-ui";
+import { Heading, Paragraph, Box, Text } from "dracula-ui";
 import HR from "../components/HR";
 
 export default function Home() {
@@ -9,11 +9,11 @@ export default function Home() {
 				className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"
 			>
 				<Box mb="sm">
-					<Heading size="2xl">ddBang</Heading>
+					<Heading size="xl">ddBang <Text size="lg">(-1)</Text></Heading>
 				</Box>
 				<HR />
 				<Box mb="sm">
-					<Heading size="lg">Privacy Policy</Heading>
+					<Heading size="md">Privacy Policy</Heading>
 				</Box>
 				<Box mb="sm">
 					<Paragraph>

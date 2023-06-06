@@ -4,8 +4,8 @@ import "dracula-ui/styles/dracula-ui.css";
 import "@fontsource-variable/jetbrains-mono";
 
 export const metadata = {
-	title: "DuckDuckBing",
-	description: "DuckDuckBing lets you use DuckDuckGo for bang queries and Bing for everything else, so you get the best of both worlds.",
+	title: "ddBang",
+	description: "ddBang lets you use DuckDuckGo for bang queries.",
 };
 
 export default function RootLayout({
