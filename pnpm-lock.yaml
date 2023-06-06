@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/jetbrains-mono':
+    specifier: ^5.0.3
+    version: 5.0.3
   '@types/node':
     specifier: 20.2.5
     version: 20.2.5
@@ -17,6 +20,9 @@ dependencies:
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.24)
+  dracula-ui:
+    specifier: ^1.0.6
+    version: 1.0.6(react@18.2.0)
   eslint:
     specifier: 8.42.0
     version: 8.42.0
@@ -91,6 +97,10 @@ packages:
   /@eslint/js@8.42.0:
     resolution: {integrity: sha512-6SWlXpWU5AvId8Ac7zjzmIOqMOba/JWY8XZ4A7q7Gn1Vlfg/SFFIlrtHXt9nPn4op9ZPAkl91Jao+QQv3r/ukw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fontsource-variable/jetbrains-mono@5.0.3:
+    resolution: {integrity: sha512-Dgj2p7YD/TFDpMBiQj0ARxixE29BUkYj8zZAE8KetU0iPeCjnpAP+Hlrhcs6OVMyoMY16im2dGOraCD3a1fanA==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
@@ -627,6 +637,10 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /classnames@2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
+
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
     dev: false
@@ -782,6 +796,18 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: false
+
+  /dracula-ui@1.0.6(react@18.2.0):
+    resolution: {integrity: sha512-yWo1ffQxuSGE9Hgeiy8D7X9qXhTeBwN1zkJ9eG7VtngneG8z1df6oGfBCQKQov0G1jUwtLnLo/P+RfZdTGztBQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      classnames: 2.3.2
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      react: 18.2.0
     dev: false
 
   /electron-to-chromium@1.4.421:
@@ -1779,8 +1805,16 @@ packages:
       p-locate: 5.0.0
     dev: false
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: false
+
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: false
 
   /loose-envify@1.4.0:
