@@ -1,4 +1,4 @@
-import { Heading, Paragraph, Box, Text, heights } from "dracula-ui";
+import { Heading, Paragraph, Box } from "dracula-ui";
 import HR from "../components/HR";
 
 export default function Home() {
@@ -9,21 +9,19 @@ export default function Home() {
 				className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"
 			>
 				<Box mb="sm">
-					<Heading size="2xl">DuckDuckBing</Heading>
+					<Heading size="2xl">ddBang</Heading>
 				</Box>
-				{/* <Box mb="sm">
-					<Divider color="animated" />
-				</Box> */}
 				<HR />
 				<Box mb="sm">
 					<Heading size="lg">Privacy Policy</Heading>
 				</Box>
 				<Box mb="sm">
 					<Paragraph>
-						It's quite simple. DuckDuckBing doesn't track any
-						queries submitted whatsoever, It simply redirects you to
-						DuckDuckGo or Bing depending on whether your search
-						contains a !bang or not.
+						It's quite simple. ddBang doesn't track any queries
+						submitted whatsoever, It simply redirects you to
+						DuckDuckGo or the search engine of your choice (defaults
+						to Bing) depending on whether your search contains a
+						!bang or not.
 					</Paragraph>
 					<Paragraph>
 						The source code for this is available{" "}
