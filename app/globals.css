@@ -29,3 +29,8 @@ body {
 body {
 	font-family: "JetBrains Mono Variable", sans-serif;
 }
+
+li {
+	overflow-x: hidden;
+	white-space: nowrap;
+}
