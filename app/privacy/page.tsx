@@ -20,7 +20,7 @@ export default function Home() {
 						It's quite simple. ddBang doesn't track any queries
 						submitted whatsoever, It simply redirects you to
 						DuckDuckGo or the search engine of your choice (defaults
-						to Bing) depending on whether your search contains a
+						to Bing & uses Google for suggestions) depending on whether your search contains a
 						!bang or not.
 					</Paragraph>
 					<Paragraph>
