@@ -68,6 +68,9 @@ export default function Home() {
 						id="searchField"
 						color="white"
 						onKeyUp={(e) => getQuery(e)}
+						borderSize="sm"
+						autoFocus
+						autoComplete="off"
 					/>
 				</Box>
 				<Box p="xs">
