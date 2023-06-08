@@ -1,5 +1,4 @@
 import { Box } from "dracula-ui";
-import { type } from "os";
 import React from "react";
 
 const { colors } = require("dracula-ui");
