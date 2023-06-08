@@ -1,7 +1,7 @@
 "use client"; // Error components must be Client Components
 
 import { Heading, Paragraph, Box, Text } from "dracula-ui";
-import HR from "./components/HR";
+import Hr from "./components/Hr";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 

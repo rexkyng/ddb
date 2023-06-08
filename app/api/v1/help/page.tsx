@@ -1,5 +1,5 @@
 import { Heading, Paragraph, Box, Text } from "dracula-ui";
-import HR from "../../../components/HR";
+import Hr from "../../../components/Hr";
 import Footer from "../../../components/Footer";
 
 export default function Home() {
@@ -11,10 +11,12 @@ export default function Home() {
 						ddBang APIs <Text size="lg">(-1)</Text>
 					</Heading>
 				</Box>
-				<HR />
+				<Hr />
 				<Box>
-					<Heading size="lg">BASE_URL</Heading>
-					<code>https://ddbang.vercel.app/api/v1</code>
+					<Heading size="lg" mb="md">BASE_URL</Heading>
+					<code id="baseUrl">
+						<a href="https://ddbang.vercel.app/api/v1">https://ddbang.vercel.app/api/v1</a>
+					</code>
 				</Box>
 				<Box pt="sm">
 					<Paragraph>TODO...</Paragraph>

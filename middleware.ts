@@ -16,6 +16,11 @@ export async function middleware(request: NextRequest) {
 				);
 			case "/":
 				return NextResponse.next();
+			case "/config":
+			case "/howto":
+				return NextResponse.json({
+					"message": "to be implemented",
+				});
 		}
 	} else {
 		console.log(pathname);

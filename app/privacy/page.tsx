@@ -1,5 +1,5 @@
 import { Heading, Paragraph, Box, Text } from "dracula-ui";
-import HR from "../components/HR";
+import Hr from "../components/Hr";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
 						ddBang <Text size="lg">(-1)</Text>
 					</Heading>
 				</Box>
-				<HR />
+				<Hr />
 				<Box>
 					<Heading size="lg">Privacy Policy</Heading>
 				</Box>
