@@ -1,18 +1,20 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 import * as htmlparser2 from "htmlparser2";
-import path from "path";
 
 export async function middleware(request: NextRequest) {
+	const BASE_URL = "http://localhost:3000";
 	var q = request.nextUrl.searchParams.get("q");
 	const pathname = request.nextUrl.pathname;
 	if (q === null) {
 		switch (pathname) {
+			case "/api":
+				return NextResponse.redirect(BASE_URL + "/api/v1/help");
 			case "/license":
 				return NextResponse.redirect(
 					"https://gitlab.com/timescam/ddb/-/raw/main/LICENSE"
 				);
-			default:
+			case "/":
 				return NextResponse.next();
 		}
 	} else {
@@ -56,8 +58,6 @@ export async function middleware(request: NextRequest) {
 						"https://bing.com/search?q=" + q
 					);
 				}
-			default:
-				
 		}
 	}
 }

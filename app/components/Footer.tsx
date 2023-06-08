@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import HomeIcon from "@mui/icons-material/Home";
+import SettingsIcon from '@mui/icons-material/Settings';
 import ApiIcon from "@mui/icons-material/Api";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DataObjectIcon from "@mui/icons-material/DataObject";
@@ -13,19 +14,23 @@ const Footer = (props: any) => {
 				<HomeIcon fontSize="small" />
 			</a>
 			{" | "}
+			<a href="/config" className="drac-text-yellow">
+				<SettingsIcon fontSize="small" />
+			</a>
+			{" | "}
 			<a href="/api" className="drac-text-green">
 				<ApiIcon fontSize="small" />
 			</a>
 			{" | "}
-			<a href="/privacy" className="drac-text-yellow">
+			<a href="/privacy" className="drac-text-red">
 				<VisibilityIcon fontSize="small" />
 			</a>
 			{" | "}
-			<a href="/license" className="drac-text-red">
+			<a href="/license" className="drac-text-orange" target="_blank">
 				<HistoryEduIcon fontSize="small" />
 			</a>
 			{" | "}
-			<a href="" className="drac-text-cyan">
+			<a href="https://gitlab.com/timescam/ddb" className="drac-text-cyan" target="_blank">
 				<DataObjectIcon fontSize="small" />
 			</a>
 		</footer>
