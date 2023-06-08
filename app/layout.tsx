@@ -15,6 +15,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<head>
+				<link type="application/opensearchdescription+xml" rel="search" href="/opensearch.xml" title="ddBang"/>
+			</head>
 			<body className="drac-bg-black">{children}</body>
 		</html>
 	);

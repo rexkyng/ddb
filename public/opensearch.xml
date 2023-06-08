@@ -1,0 +1,10 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+	xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+	<ShortName>ddBang</ShortName>
+	<Description>ddBang Search Engine</Description>
+	<InputEncoding>UTF-8</InputEncoding>
+	<Image width="16" height="16" type="image/x-icon">https://ddbang.vercel.app/favicon.ico</Image>
+	<Url type="text/html" template="https://ddbang.vercel.app/?q={searchTerms}" />
+	<Url type="application/x-suggestions+json" template="https://ddbang.vercel.app/suggestions?q={searchTerms}" />
+	<moz:SearchForm>https://ddbang.vercel.app</moz:SearchForm>
+</OpenSearchDescription>
