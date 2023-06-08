@@ -1,14 +1,12 @@
 "use client";
-import { Box, Heading, Input, Card, Button, List } from "dracula-ui";
+import { Box, Heading, Input, Card, List } from "dracula-ui";
+import Footer from "./components/Footer";
 
 export default function Home() {
 	function getQuery(event: any) {
 		var key = event.key;
+		// TODO: add support for arrow keys up and down to select suggestions
 		if (key == "ArrowUp") {
-			// emulate shift keypress
-			var searchField = document.getElementById("searchField");
-			searchField?.focus();
-			// searchField?.setSelectionRange(0, query.length);
 		} else if (key == "ArrowDown") {
 		} else if (key == "Escape") {
 		} else if (key != "ArrowLeft" && key != "ArrowRight") {
@@ -55,37 +53,40 @@ export default function Home() {
 
 	return (
 		// <main className="flex min-h-screen flex-col items-center p-24">
-		<Box className="items-center flex flex-col" p="lg" m="lg">
-			<Box>
-				<Heading size="2xl" color="purpleCyan">
-					ddBang
-				</Heading>
-			</Box>
-			<Box style={{ width: "30vw", minWidth: "350px" }}>
-				<Box p="xs">
-					<Input
-						placeholder="Enter to search"
-						id="searchField"
-						color="white"
-						onKeyUp={(e) => getQuery(e)}
-						borderSize="sm"
-						autoFocus
-						autoComplete="off"
-					/>
+		<Box className="flex flex-col justify-between h-screen">
+			<Box className="items-center flex flex-col" p="lg">
+				<Box>
+					<Heading size="2xl" color="purpleCyan" pt="lg">
+						ddBang
+					</Heading>
 				</Box>
-				<Box p="xs">
-					<Card
-						p="sm"
-						variant="subtle"
-						color="black"
-						id="suggestionsCard"
-						className="hidden drac-scrollbar-grey"
-						style={{ overflowY: "scroll", maxHeight: "20vh" }}
-					>
-						<List id="suggestions"></List>
-					</Card>
+				<Box style={{ width: "30vw", minWidth: "350px" }}>
+					<Box p="xs">
+						<Input
+							placeholder="Enter to search"
+							id="searchField"
+							color="white"
+							onKeyUp={(e) => getQuery(e)}
+							borderSize="sm"
+							autoFocus
+							autoComplete="off"
+						/>
+					</Box>
+					<Box p="xs">
+						<Card
+							p="sm"
+							variant="subtle"
+							color="black"
+							id="suggestionsCard"
+							className="hidden drac-scrollbar-grey"
+							style={{ overflowY: "scroll", maxHeight: "20vh" }}
+						>
+							<List id="suggestions"></List>
+						</Card>
+					</Box>
 				</Box>
 			</Box>
+			<Footer />
 		</Box>
 		// </main>
 	);

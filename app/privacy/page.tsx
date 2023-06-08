@@ -1,38 +1,42 @@
 import { Heading, Paragraph, Box, Text } from "dracula-ui";
 import HR from "../components/HR";
+import Footer from "../components/Footer";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-			<Box
-				mb="sm"
-				className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"
-			>
-				<Box mb="sm">
-					<Heading size="xl">ddBang <Text size="lg">(-1)</Text></Heading>
+		<Box className="flex flex-col justify-between h-screen" pt="lg">
+			<Box className="" p="lg">
+				<Box>
+					<Heading size="xl">
+						ddBang <Text size="lg">(-1)</Text>
+					</Heading>
 				</Box>
 				<HR />
-				<Box mb="sm">
-					<Heading size="md">Privacy Policy</Heading>
+				<Box>
+					<Heading size="lg">Privacy Policy</Heading>
 				</Box>
-				<Box mb="sm">
+				<Box pt="sm">
 					<Paragraph>
 						It's quite simple. ddBang doesn't track any queries
 						submitted whatsoever, It simply redirects you to
 						DuckDuckGo or the search engine of your choice (defaults
-						to Bing & uses Google for suggestions) depending on whether your search contains a
-						!bang or not.
+						to Bing & uses Google for suggestions) depending on
+						whether your search contains a !bang or not.
 					</Paragraph>
-					<Paragraph>
-						The source code for this is available{" "}
-						<a href="https://github.com/timescam/duckduckbing/blob/master/app.js#L22">
-							here on GitHub
-						</a>{" "}
-						so you're free to take a look or even host your own
+					<Paragraph pt="sm">
+						The source code for this is available
+						<Text color="cyan">
+							{" "}
+							<a href="https://github.com/timescam/duckduckbing/blob/master/app.js#L22">
+								here on GitHub
+							</a>
+						</Text>
+						. So you're free to take a look or even host your own
 						version if you'd like.
 					</Paragraph>
 				</Box>
 			</Box>
-		</main>
+			<Footer />
+		</Box>
 	);
 }
