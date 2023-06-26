@@ -1,6 +1,6 @@
 "use client";
 import { Box, Heading, Input, Card, List } from "dracula-ui";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 export default function Home() {
 	function getQuery(event: any) {

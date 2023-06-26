@@ -1,6 +1,6 @@
 import { Heading, Paragraph, Box, Text } from "dracula-ui";
-import Hr from "../components/Hr";
-import Footer from "../components/Footer";
+import Hr from "../../components/Hr";
+import Footer from "../../components/Footer";
 
 export default function Home() {
 	return (
