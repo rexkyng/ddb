@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 import * as htmlparser2 from "htmlparser2";
 
 export async function middleware(request: NextRequest) {
-	const BASE_URL = "http://localhost:3000";
+	const BASE_URL = "https://ddbang.vercel.app";
 	var q = request.nextUrl.searchParams.get("q");
 	const pathname = request.nextUrl.pathname;
 	if (q === null) {
