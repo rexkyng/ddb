@@ -5,6 +5,7 @@ import * as htmlparser2 from "htmlparser2";
 export async function middleware(request: NextRequest) {
 	const BASE_URL = "https://ddbang.vercel.app";
 	var q = request.nextUrl.searchParams.get("q");
+	var qEncoded = encodeURI(q);
 	const pathname = request.nextUrl.pathname;
 	if (q === null) {
 		switch (pathname) {
@@ -28,7 +29,7 @@ export async function middleware(request: NextRequest) {
 			case "/suggestions":
 				var suggestionsXML = await fetch(
 					"http://clients1.google.com/complete/search?hl=en&output=toolbar&q=" +
-						q
+						qEncoded
 				);
 				var suggestionsText = await suggestionsXML.text();
 				// // return xml
@@ -49,18 +50,18 @@ export async function middleware(request: NextRequest) {
 				parser.write(suggestionsText);
 				parser.end();
 				var suggestions = {
-					query: q,
+					query: qEncoded,
 					suggestions: suggestionsArray,
 				};
 				return NextResponse.json(suggestions);
 			case "/":
 				if (q.startsWith("!")) {
 					return NextResponse.redirect(
-						"https://duckduckgo.com/?q=" + q
+						"https://duckduckgo.com/?q=" + qEncoded
 					);
 				} else {
 					return NextResponse.redirect(
-						"https://bing.com/search?q=" + q
+						"https://bing.com/search?q=" + qEncoded
 					);
 				}
 		}
