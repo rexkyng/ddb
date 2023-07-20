@@ -5,7 +5,7 @@ import * as htmlparser2 from "htmlparser2";
 export async function middleware(request: NextRequest) {
 	const BASE_URL = "https://ddbang.vercel.app";
 	var q = request.nextUrl.searchParams.get("q");
-	var qEncoded = encodeURI(q);
+	var qEncoded = encodeURI(q || "");
 	const pathname = request.nextUrl.pathname;
 	if (q === null) {
 		switch (pathname) {
