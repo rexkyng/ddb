@@ -10,17 +10,17 @@ export default function Home() {
 		} else if (key == "ArrowDown") {
 		} else if (key == "Escape") {
 		} else if (key != "ArrowLeft" && key != "ArrowRight") {
-			var query = event.target.value;
+			var query = encodeURIComponent(event.target.value);
 			if (key == "Enter") {
 				// redirect to ?q=query
 				window.location.href = "?q=" + query;
 			} else {
 				// set a timeout, if no new keypresses after 170ms, get suggestions
 				setTimeout(() => {
-					if (query == event.target.value) {
+					if (query == encodeURIComponent(event.target.value)) {
 						getSuggestions(query);
 					}
-				}, 170);
+				}, 150);
 			}
 		}
 	}
