@@ -1,6 +1,6 @@
 # ddBang
 
-Search engine providing both [bangs](https://duckduckgo.com/bangs) from DuckDuckGo and Bing search, written with [Next.js](https://nextjs.org/).
+Search engine powered by [Next.js](https://nextjs.org/) providing [bangs](https://duckduckgo.com/bangs) from DuckDuckGo, suggestion from google, and search from Bing.
 
 ## Usage
 
@@ -16,8 +16,10 @@ Search engine providing both [bangs](https://duckduckgo.com/bangs) from DuckDuck
 /suggest?q=<query>
 ```
 
-provided by Google
-
 ## License
 
 [unlicense](/LICENSE)
+
+## TODO 
+
+- [ ] Rewrite without Dracula UI, as it was [no longer maintained](https://draculatheme.com/blog/sunsetting-dracula-ui)
