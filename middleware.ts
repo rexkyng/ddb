@@ -55,7 +55,7 @@ export async function middleware(request: NextRequest) {
 				};
 				return NextResponse.json(suggestions);
 			case "/":
-				if (q.startsWith("!")) {
+				if (q.includes("!")) {
 					return NextResponse.redirect(
 						"https://duckduckgo.com/?q=" + qEncoded
 					);
